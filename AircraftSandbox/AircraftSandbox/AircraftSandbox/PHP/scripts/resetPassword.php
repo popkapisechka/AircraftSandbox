@@ -22,14 +22,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['email'])) {
     try {
         $mail->CharSet = 'UTF-8';
         $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com'; // або інший SMTP-сервер
-        $mail->SMTPAuth = true;
-        $mail->Username = 'anton.palamarchuk@nure.ua';      // ⚠️ заміни
-        $mail->Password = 'hmmx ahln ouow oktp';       // ⚠️ заміни
-        $mail->SMTPSecure = 'tls';
-        $mail->Port = 587;
+        $mail->Host = ''; // або інший SMTP-сервер
+        $mail->SMTPAuth = ;
+        $mail->Username = '';      // ⚠️ заміни
+        $mail->Password = '';       // ⚠️ заміни
+        $mail->SMTPSecure = '';
+        $mail->Port = ;
 
-        $mail->setFrom('anton.palamarchuk@nure.ua', 'Відновлення пароля');
+        $mail->setFrom('', 'Відновлення пароля');
         $mail->addAddress($email);
 
         $mail->isHTML(true);
